@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "metatron-tui"
+version = "0.1.0"
+description = "Interactive TUI client for the Metatron PDF metadata tool"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "metatron @ git+https://github.com/naghim/metatron@main",
+    "textual>=0.80.0",
+]
+
+[project.scripts]
+metatron-tui = "metatron_tui.tui:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/metatron_tui"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.ruff]
+line-length = 100

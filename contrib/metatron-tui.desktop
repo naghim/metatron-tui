@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Metatron
+GenericName=PDF Metadata Editor
+Comment=View and edit PDF metadata
+Exec=metatron-tui %f
+Icon=metatron-tui
+Terminal=true
+Categories=Utility;
+MimeType=application/pdf;
+StartupNotify=true
